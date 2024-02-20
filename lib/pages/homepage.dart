@@ -5,6 +5,7 @@ import 'package:web_portfolio/widgets/drawer_mobile.dart';
 import 'package:web_portfolio/widgets/header_desktop.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:web_portfolio/widgets/header_mobile.dart';
+import 'package:web_portfolio/widgets/main_desktop.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -21,30 +22,17 @@ class _HomePageState extends State<HomePage> {
       key: scafoldKey,
       backgroundColor: CustomColor.scaffoldBg,
       endDrawer: DrawerMobile(),
-      body: ListView(
-        children: [
-          //MENU
-          ScreenTypeLayout(
-            desktop: HeaderDesktop(),
-            mobile: HeaderMobile(
-              onLogoTap: () {},
-              onMenuTap: () {
-                scafoldKey.currentState?.openEndDrawer();
-              },
-            ),
-          ),
-
-          Container(
-            color: Colors.white,
-            width: double.maxFinite,
-            height: 500,
-          ),
-          Container(
-            color: Colors.yellow,
-            width: double.maxFinite,
-            height: 500,
-          ),
-        ],
+      body: ScreenTypeLayout(
+        desktop: ListView(children: [
+          HeaderDesktop(),
+          MainDesktop(),
+        ]),
+        mobile: HeaderMobile(
+          onLogoTap: () {},
+          onMenuTap: () {
+            scafoldKey.currentState?.openEndDrawer();
+          },
+        ),
       ),
     );
   }
