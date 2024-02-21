@@ -8,6 +8,7 @@ class MainDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      // height: MediaQuery.of(context).size.height / 1.2,
       margin: EdgeInsets.symmetric(horizontal: 40),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -15,6 +16,7 @@ class MainDesktop extends StatelessWidget {
           Expanded(
             flex: 4,
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
                   'Hi\nI\'m Duy Dang\nI\'m working Flutter Dev\nAnd Database Admintrator',
@@ -25,10 +27,11 @@ class MainDesktop extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 30,
                 ),
                 Container(
-                  height: 40,
+                  width: 350,
+                  height: 50,
                   child: ElevatedButton(
                     onPressed: () {},
                     child: Text('Get in touch'),
@@ -41,7 +44,7 @@ class MainDesktop extends StatelessWidget {
             flex: 6,
             child: Image.asset(
               Images.myLogo,
-              height: MediaQuery.of(context).size.height,
+              height: MediaQuery.of(context).size.height / 1.4,
             ),
           ),
         ],
