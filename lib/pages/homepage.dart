@@ -7,6 +7,7 @@ import 'package:responsive_builder/responsive_builder.dart';
 import 'package:web_portfolio/widgets/header_mobile.dart';
 import 'package:web_portfolio/widgets/main_desktop.dart';
 import 'package:web_portfolio/widgets/main_mobile.dart';
+import 'package:web_portfolio/widgets/skill_desktop.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -27,6 +28,7 @@ class _HomePageState extends State<HomePage> {
         desktop: ListView(children: [
           HeaderDesktop(),
           MainDesktop(),
+          SkillDesktop(),
         ]),
         mobile: ListView(
           children: [

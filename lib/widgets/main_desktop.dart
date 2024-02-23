@@ -9,7 +9,7 @@ class MainDesktop extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       // height: MediaQuery.of(context).size.height / 1.2,
-      margin: EdgeInsets.symmetric(horizontal: 40),
+      margin: EdgeInsets.symmetric(horizontal: 40, vertical: 50),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
@@ -44,7 +44,7 @@ class MainDesktop extends StatelessWidget {
             flex: 6,
             child: Image.asset(
               Images.myLogo,
-              height: MediaQuery.of(context).size.height / 1.4,
+              height: MediaQuery.of(context).size.height / 1.8,
             ),
           ),
         ],
